@@ -1,0 +1,2440 @@
+/* =========================================================
+   ARMOIRE CENTRAL
+   HOME PAGE — DESIGN PREMIUM
+========================================================= */
+
+
+/* =========================================================
+   RESET ESPECÍFICO DA HOME
+========================================================= */
+
+body {
+
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #111;
+
+    background: #fff;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   TOP BAR — FIXA
+========================================================= */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    z-index: 2000;
+
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+/* =========================================================
+   TOP BAR — ESTADO CLARO
+========================================================= */
+
+.top-bar.topbar-clara {
+    background: rgba(255, 255, 255, 0.97);
+    color: #111;
+
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+
+    backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header-home {
+
+    position: absolute;
+
+    top: 32px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    box-sizing: border-box;
+
+    z-index: 100;
+
+    color: #fff;
+
+    transition:
+        background 0.5s ease,
+        color 0.5s ease,
+        transform 0.5s ease;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.header-home .logo {
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 101;
+
+}
+
+
+.header-home .logo a {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.header-home .logo img {
+
+    width: 85px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+.header-home.header-scroll {
+    position: fixed;
+    top: 32px;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+    color: #111;
+
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.06);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 1500;
+}
+
+.header-home.header-scroll .logo img {
+    filter: brightness(0);
+}
+
+.header-home.header-scroll .icons-home,
+.header-home.header-scroll .icons-home i {
+    color: #111;
+}
+
+.header-home.header-scroll .nav-desktop a {
+    color: #111;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO DESKTOP
+========================================================= */
+
+.nav-desktop {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+
+}
+
+
+.nav-desktop a {
+
+    position: relative;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.6px;
+
+    padding: 10px 0;
+
+    transition: color 0.3s ease;
+
+}
+
+
+/* barrinha da página ativa */
+
+.nav-desktop a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 1px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #4b9cff;
+
+    transition: width 0.35s ease;
+
+}
+
+
+.nav-desktop a.ativo::after {
+
+    width: 100%;
+
+}
+
+
+.nav-desktop a:hover::after {
+
+    width: 100%;
+
+}
+
+
+.nav-desktop a:hover {
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   ÍCONES
+========================================================= */
+
+.icons-home {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    z-index: 101;
+
+}
+
+
+.icons-home > i {
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+.icons-home > i:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.7;
+
+}
+
+
+.icone-carrinho-home {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.icone-carrinho-home i {
+
+    font-size: 15px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.icone-carrinho-home:hover i {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   BOTÃO MENU
+========================================================= */
+
+.botao-menu {
+
+    width: 38px;
+
+    height: 38px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+
+}
+
+
+.botao-menu i {
+
+    font-size: 19px;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+
+}
+
+
+.botao-menu:hover i {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+
+.menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    z-index: 998;
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+
+}
+
+
+.menu-overlay.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =========================================================
+   PAINEL DO MENU
+========================================================= */
+
+.menu-lateral {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: min(430px, 90vw);
+
+    height: 100vh;
+
+    background: #fff;
+
+    color: #111;
+
+    z-index: 999;
+
+    padding: 35px 42px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.6s cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.menu-lateral.aberto {
+
+    transform: translateX(0);
+
+}
+
+
+body.menu-aberto {
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   TOPO DO MENU
+========================================================= */
+
+.menu-topo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #e8e8e8;
+
+}
+
+
+.menu-topo span {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+.menu-topo button {
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    color: #111;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.menu-topo button:hover {
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================================
+   LINKS DO MENU
+========================================================= */
+
+.menu-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 45px;
+
+}
+
+
+.menu-links a {
+
+    position: relative;
+
+    width: fit-content;
+
+    padding: 17px 0;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+}
+
+
+.menu-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 10px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #111;
+
+    transition: width 0.4s ease;
+
+}
+
+
+.menu-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   PARTE INFERIOR DO MENU
+========================================================= */
+
+.menu-inferior {
+
+    margin-top: auto;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e8e8e8;
+
+}
+
+
+.menu-inferior p {
+
+    margin: 0 0 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+.menu-inferior span {
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    color: #777;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-home {
+
+    position: relative;
+
+    width: 100%;
+
+    height: calc(100vh - 32px);
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #111;
+
+}
+
+
+/* =========================================================
+   IMAGEM DO HERO
+========================================================= */
+
+.hero-imagem {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+
+.hero-imagem::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.58) 0%,
+            rgba(0,0,0,0.28) 42%,
+            rgba(0,0,0,0.05) 75%
+        );
+
+}
+
+
+.hero-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    animation: heroZoom 12s ease-out forwards;
+
+}
+
+
+@keyframes heroZoom {
+
+    from {
+
+        transform: scale(1.08);
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTEÚDO HERO
+========================================================= */
+
+.hero-conteudo {
+
+    position: absolute;
+
+    left: 8%;
+
+    bottom: 13%;
+
+    max-width: 650px;
+
+    color: #fff;
+
+    z-index: 5;
+
+}
+
+
+.hero-overline {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    opacity: 0.9;
+
+}
+
+
+.hero-conteudo h1 {
+
+    margin: 0;
+
+    font-size: clamp(42px, 5vw, 76px);
+
+    line-height: 0.98;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero-conteudo p {
+
+    max-width: 520px;
+
+    margin: 28px 0 35px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* =========================================================
+   BOTÃO PREMIUM
+========================================================= */
+
+.botao-colecao {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 205px;
+
+    height: 52px;
+
+    padding: 0 25px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition: color 0.45s ease;
+
+}
+
+
+.botao-colecao::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #fff;
+
+    transform: translateX(-101%);
+
+    transition:
+        transform 0.5s cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.botao-colecao span {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.botao-colecao:hover {
+
+    color: #111;
+
+}
+
+
+.botao-colecao:hover::before {
+
+    transform: translateX(0);
+
+}
+
+
+/* =========================================================
+   INDICADOR DE SCROLL
+========================================================= */
+
+.hero-home::after {
+
+    content: "SCROLL";
+
+    position: absolute;
+
+    right: 35px;
+
+    bottom: 35px;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    writing-mode: vertical-rl;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.introducao-home {
+
+    min-height: 560px;
+
+    padding: 130px 12%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #fff;
+
+}
+
+
+.introducao-home > span {
+
+    margin-bottom: 30px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+}
+
+
+.introducao-home h2 {
+
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 72px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+}
+
+
+.introducao-home p {
+
+    max-width: 540px;
+
+    margin: 35px auto 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================================================
+   DESTAQUE DA COLEÇÃO
+========================================================= */
+
+.destaque-home {
+
+    position: relative;
+
+    min-height: 760px;
+
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    background: #f4f4f2;
+
+    overflow: hidden;
+
+}
+
+
+.destaque-imagem {
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+}
+
+
+.destaque-imagem img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.destaque-home:hover .destaque-imagem img {
+
+    transform: scale(1.035);
+
+}
+
+
+.destaque-conteudo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px;
+
+    box-sizing: border-box;
+
+}
+
+
+.destaque-conteudo > span {
+
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+}
+
+
+.destaque-conteudo h2 {
+
+    margin: 0;
+
+    font-size: clamp(35px, 4vw, 58px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.destaque-conteudo p {
+
+    max-width: 380px;
+
+    margin: 30px 0;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+}
+
+
+.destaque-conteudo .botao-colecao {
+
+    width: fit-content;
+
+    border-color: #111;
+
+    color: #111;
+
+}
+
+
+.destaque-conteudo .botao-colecao::before {
+
+    background: #111;
+
+}
+
+
+.destaque-conteudo .botao-colecao:hover {
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   CATEGORIAS
+========================================================= */
+
+.categorias-home {
+
+    padding: 130px 6%;
+
+    background: #fff;
+
+}
+
+
+.titulo-secao {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+
+}
+
+
+.titulo-secao span {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+}
+
+
+.titulo-secao h2 {
+
+    margin: 0;
+
+    font-size: clamp(28px, 3vw, 42px);
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+}
+
+
+.categorias-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.categoria-home {
+
+    position: relative;
+
+    display: block;
+
+    height: 580px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    background: #111;
+
+}
+
+
+.categoria-home img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.categoria-home::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.05) 60%
+        );
+
+    opacity: 0.9;
+
+    transition: opacity 0.5s ease;
+
+}
+
+
+.categoria-home:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.categoria-home:hover::after {
+
+    opacity: 1;
+
+}
+
+
+.categoria-overlay {
+
+    position: absolute;
+
+    left: 38px;
+
+    bottom: 35px;
+
+    z-index: 2;
+
+    color: #fff;
+
+}
+
+
+.categoria-overlay h3 {
+
+    margin: 0 0 14px;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+}
+
+
+.categoria-overlay span {
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+
+    padding-bottom: 5px;
+
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+========================================================= */
+
+.beneficios-home {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 85px 7%;
+
+    border-top: 1px solid #e7e7e7;
+
+    border-bottom: 1px solid #e7e7e7;
+
+    background: #fff;
+
+}
+
+
+.beneficio {
+
+    text-align: center;
+
+    padding: 10px 25px;
+
+    border-right: 1px solid #e5e5e5;
+
+}
+
+
+.beneficio:last-child {
+
+    border-right: none;
+
+}
+
+
+.beneficio i {
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    color: #222;
+
+}
+
+
+.beneficio h3 {
+
+    margin: 0 0 9px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.beneficio p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter-home {
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 7%;
+
+    box-sizing: border-box;
+
+    background: #111;
+
+    color: #fff;
+
+}
+
+
+.newsletter-conteudo {
+
+    width: 100%;
+
+    max-width: 720px;
+
+}
+
+
+.newsletter-conteudo > span {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    opacity: 0.7;
+
+}
+
+
+.newsletter-conteudo h2 {
+
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+}
+
+
+.newsletter-conteudo p {
+
+    max-width: 480px;
+
+    margin: 30px auto 45px;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO NEWSLETTER
+========================================================= */
+
+.newsletter-form {
+
+    width: min(520px, 100%);
+
+    margin: auto;
+
+    display: flex;
+
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+
+}
+
+
+.newsletter-form input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 55px;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.newsletter-form input::placeholder {
+
+    color: rgba(255,255,255,0.55);
+
+}
+
+
+.newsletter-form button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 5px 0 20px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+}
+
+
+.newsletter-form button span {
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.newsletter-form button i {
+
+    font-size: 11px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.newsletter-form button:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-home {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding: 80px 7% 45px;
+
+    background: #fff;
+
+    color: #111;
+
+    border-top: 1px solid #e5e5e5;
+
+}
+
+
+.footer-logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+.footer-coluna {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.footer-coluna h4 {
+
+    margin: 0 0 10px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-coluna a {
+
+    width: fit-content;
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.footer-coluna a:hover {
+
+    color: #111;
+
+}
+
+
+.footer-copy {
+
+    grid-column: 1 / -1;
+
+    padding-top: 35px;
+
+    margin-top: 25px;
+
+    border-top: 1px solid #e8e8e8;
+
+    color: #999;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+
+    .header-home {
+
+        padding: 0 30px;
+
+    }
+
+
+    .nav-desktop {
+
+        display: none;
+
+    }
+
+
+    .hero-conteudo {
+
+        left: 7%;
+
+        right: 7%;
+
+    }
+
+
+    .destaque-home {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .destaque-imagem {
+
+        min-height: 600px;
+
+    }
+
+
+    .destaque-conteudo {
+
+        min-height: 500px;
+
+        padding: 70px 8%;
+
+    }
+
+
+    .beneficios-home {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+
+    }
+
+
+    .beneficio:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .footer-home {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .top-bar {
+
+        height: 30px;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+        padding: 0 10px;
+
+        text-align: center;
+
+    }
+
+
+    .header-home {
+
+        top: 30px;
+
+        height: 70px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .header-home .logo img {
+
+        width: 115px;
+
+    }
+
+
+    .icons-home {
+
+        gap: 14px;
+
+    }
+
+
+    .icons-home > i {
+
+        display: none;
+
+    }
+
+
+    .botao-menu {
+
+        width: 35px;
+
+    }
+
+
+    .hero-home {
+
+        height: calc(100vh - 30px);
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-imagem img {
+
+        object-position: center;
+
+    }
+
+
+    .hero-conteudo {
+
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 11%;
+
+    }
+
+
+    .hero-overline {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-conteudo h1 {
+
+        font-size: clamp(38px, 11vw, 54px);
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .hero-conteudo p {
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        margin: 23px 0 28px;
+
+    }
+
+
+    .botao-colecao {
+
+        min-width: 190px;
+
+        height: 48px;
+
+    }
+
+
+    .hero-home::after {
+
+        right: 18px;
+
+        bottom: 25px;
+
+        font-size: 7px;
+
+    }
+
+
+    .introducao-home {
+
+        min-height: 470px;
+
+        padding: 90px 25px;
+
+    }
+
+
+    .introducao-home h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .introducao-home p {
+
+        font-size: 12px;
+
+    }
+
+
+    .destaque-home {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+    .destaque-imagem {
+
+        min-height: 470px;
+
+    }
+
+
+    .destaque-conteudo {
+
+        min-height: 480px;
+
+        padding: 65px 25px;
+
+    }
+
+
+    .destaque-conteudo h2 {
+
+        font-size: 39px;
+
+    }
+
+
+    .categorias-home {
+
+        padding: 90px 18px;
+
+    }
+
+
+    .titulo-secao {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .categorias-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .categoria-home {
+
+        height: 500px;
+
+    }
+
+
+    .categoria-overlay {
+
+        left: 25px;
+
+        bottom: 25px;
+
+    }
+
+
+    .beneficios-home {
+
+        grid-template-columns: 1fr;
+
+        padding: 55px 25px;
+
+        gap: 0;
+
+    }
+
+
+    .beneficio {
+
+        padding: 28px 10px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #e5e5e5;
+
+    }
+
+
+    .beneficio:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .newsletter-home {
+
+        min-height: 550px;
+
+        padding: 80px 25px;
+
+    }
+
+
+    .newsletter-conteudo h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .newsletter-form {
+
+        flex-direction: column;
+
+        border-bottom: none;
+
+    }
+
+
+    .newsletter-form input {
+
+        border-bottom: 1px solid rgba(255,255,255,0.7);
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .newsletter-form button {
+
+        height: 48px;
+
+        justify-content: center;
+
+        border: 1px solid rgba(255,255,255,0.7);
+
+    }
+
+
+    .footer-home {
+
+        grid-template-columns: 1fr;
+
+        padding: 65px 25px 35px;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-copy {
+
+        grid-column: auto;
+
+    }
+
+    /* =========================================================
+   ANIMAÇÕES — HOME
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-conteudo {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.hero-conteudo.hero-carregado {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   ELEMENTOS DO HERO
+========================================================= */
+
+.hero-overline {
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.8s ease 0.15s,
+        transform 0.8s ease 0.15s;
+
+}
+
+
+.hero-carregado .hero-overline {
+
+    opacity: 0.9;
+
+    transform: translateY(0);
+
+}
+
+
+.hero-conteudo h1 {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.9s ease 0.3s,
+        transform 0.9s cubic-bezier(.2,.7,.2,1) 0.3s;
+
+}
+
+
+.hero-carregado h1 {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.hero-conteudo p {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.9s ease 0.45s,
+        transform 0.9s ease 0.45s;
+
+}
+
+
+.hero-carregado p {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.hero-conteudo .botao-colecao {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.9s ease 0.6s,
+        transform 0.9s cubic-bezier(.2,.7,.2,1) 0.6s,
+        color 0.45s ease;
+
+}
+
+
+.hero-carregado .botao-colecao {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE SCROLL
+========================================================= */
+
+.animar-scroll {
+
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.animar-scroll.visivel {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+.destaque-imagem {
+
+    clip-path: inset(0 0 100% 0);
+
+    transition:
+        clip-path 1.2s cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.destaque-imagem.visivel {
+
+    clip-path: inset(0 0 0 0);
+
+}
+
+
+/* =========================================================
+   CONTEÚDO DO DESTAQUE
+========================================================= */
+
+.destaque-conteudo {
+
+    transform: translateX(40px);
+
+}
+
+
+.destaque-conteudo.visivel {
+
+    transform: translateX(0);
+
+}
+
+
+/* =========================================================
+   CATEGORIAS
+========================================================= */
+
+.categoria-home {
+
+    opacity: 0;
+
+    transform:
+        translateY(50px)
+        scale(0.98);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        clip-path 1s ease;
+
+}
+
+
+.categoria-home.visivel {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   OVERLAY DAS CATEGORIAS
+========================================================= */
+
+.categoria-overlay {
+
+    transform: translateY(15px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.7s ease 0.25s,
+        transform 0.7s ease 0.25s;
+
+}
+
+
+.categoria-home.visivel .categoria-overlay {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+========================================================= */
+
+.beneficio {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.beneficio.visivel {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter-conteudo {
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.newsletter-conteudo.visivel {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-coluna {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.footer-coluna.visivel {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   HEADER DURANTE O SCROLL
+========================================================= */
+
+.header-home.header-scroll {
+
+    position: fixed;
+
+    top: 0;
+
+    background: rgba(255,255,255,0.96);
+
+    color: #111;
+
+    box-shadow:
+        0 1px 15px rgba(0,0,0,0.06);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.header-home.header-scroll .nav-desktop a {
+
+    color: #111;
+
+}
+
+
+.header-home.header-scroll .nav-desktop a:hover {
+
+    color: #111;
+
+}
+
+
+/* =========================================================
+   TRANSIÇÃO DO LOGO
+========================================================= */
+
+.header-home .logo img {
+
+    transition:
+        filter 0.4s ease;
+
+}
+
+
+.header-home.header-scroll .logo img {
+
+    filter: brightness(0);
+
+}
+
+
+/* =========================================================
+   REDUZIR MOVIMENTO PARA USUÁRIOS
+   QUE PREFEREM MENOS ANIMAÇÃO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
+
+
+}
