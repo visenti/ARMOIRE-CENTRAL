@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Armoire Central - Produtos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     OVERLAY DO CARRINHO
+===================================================== -->
+
+<div
+    id="overlayCarrinho"
+    class="overlay-carrinho">
+</div>
+
+
+<!-- =====================================================
+     CARRINHO LATERAL
+===================================================== -->
+
+<aside
+    id="carrinho"
+    class="carrinho">
+
+    <div class="topo-carrinho">
+
+        <h2>
+            Meu Carrinho
+        </h2>
+
+        <button
+            id="fecharCarrinho"
+            type="button"
+            aria-label="Fechar carrinho">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div id="listaCarrinho">
+
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+
+    </div>
+
+
+    <div class="rodape-carrinho">
+
+        <div class="total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="totalCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <button
+            class="btn-finalizar"
+            type="button">
+
+            FINALIZAR COMPRA
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     BARRA SUPERIOR
+===================================================== -->
+
+<div class="top-bar">
+
+    FRETE GRÁTIS PARA TODO BRASIL EM COMPRAS ACIMA DE R$499
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <img
+            src="images/logoinv.png"
+            alt="Armoire Central">
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            INÍCIO
+        </a>
+
+        <a href="produtos.html">
+            PRODUTOS
+        </a>
+
+        <a href="#">
+            QUEM SOMOS
+        </a>
+
+        <a href="#">
+            FALE CONOSCO
+        </a>
+
+    </nav>
+
+
+    <div class="icons">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <i class="fa-regular fa-user"></i>
+
+
+        <div
+            class="icone-carrinho"
+            id="abrirCarrinho">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span class="contador-carrinho">
+                0
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
+
+<section class="banner-produtos">
+
+    <div class="banner-overlay">
+
+        <h1>
+            PRODUTOS
+        </h1>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATÁLOGO
+===================================================== -->
+
+<section class="catalogo">
+
+
+    <!-- =================================================
+         FILTROS
+    ================================================== -->
+
+    <aside class="filtros">
+
+
+        <!-- =============================================
+             TIPO DE ROUPA
+        ============================================== -->
+
+        <div class="filtro-bloco">
+
+            <h3>
+                TIPO DE ROUPA
+            </h3>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="camisetas">
+
+                Camisetas
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="polos">
+
+                Polos
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="baby tee">
+
+                Baby Tee
+
+            </label>
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="agasalhos">
+
+                Agasalhos
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="calcas">
+
+                Calças
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="bermudas">
+
+                Bermudas
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-categoria"
+                    value="acessorios">
+
+                Acessórios
+
+            </label>
+
+        </div>
+
+
+
+        <!-- =============================================
+             TAMANHOS
+        ============================================== -->
+
+        <div class="filtro-bloco">
+
+            <h3>
+                TAMANHOS
+            </h3>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-tamanho"
+                    value="P">
+
+                P
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-tamanho"
+                    value="M">
+
+                M
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-tamanho"
+                    value="G">
+
+                G
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-tamanho"
+                    value="GG">
+
+                GG
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="filtro-tamanho"
+                    value="XGG">
+
+                XGG
+
+            </label>
+
+        </div>
+
+
+
+<!-- =============================================
+     CORES
+============================================== -->
+
+<div class="filtro-bloco">
+
+    <h3>CORES</h3>
+
+    <div class="cores">
+
+        <button
+            type="button"
+            class="filtro-cor cor-preto"
+            data-cor="Preto"
+            title="Preto"
+            aria-label="Filtrar por Preto">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-vinho"
+            data-cor="Vinho"
+            title="Vinho"
+            aria-label="Filtrar por Vinho">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-azul-marinho"
+            data-cor="Azul Marinho"
+            title="Azul Marinho"
+            aria-label="Filtrar por Azul Marinho">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-azul-royal"
+            data-cor="Azul Royal"
+            title="Azul Royal"
+            aria-label="Filtrar por Azul Royal">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-branco"
+            data-cor="Branco"
+            title="Branco"
+            aria-label="Filtrar por Branco">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-off-white"
+            data-cor="Off-White"
+            title="Off-White"
+            aria-label="Filtrar por Off-White">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-cinza"
+            data-cor="Cinza"
+            title="Cinza"
+            aria-label="Filtrar por Cinza">
+        </button>
+
+        <button
+            type="button"
+            class="filtro-cor cor-rosa"
+            data-cor="Rosa"
+            title="Rosa"
+            aria-label="Filtrar por Rosa">
+        </button>
+
+    </div>
+
+</div>
+
+
+
+        <!-- =============================================
+             LIMPAR FILTROS
+        ============================================== -->
+
+        <button
+            type="button"
+            id="limparFiltros"
+            class="limpar-filtros">
+
+            LIMPAR FILTROS
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         PRODUTOS
+    ================================================== -->
+
+    <main class="produtos">
+
+
+        <!-- =============================================
+             CABEÇALHO DOS RESULTADOS
+        ============================================== -->
+
+        <div class="cabecalho-produtos">
+
+            <p id="contadorProdutos">
+                Produtos
+            </p>
+
+        </div>
+
+
+        <!-- =============================================
+             MENSAGEM DE NENHUM RESULTADO
+        ============================================== -->
+
+       <div
+    id="nenhumResultado"
+    class="nenhum-resultado"
+    style="display:none;">
+
+    <div class="nenhum-resultado-icone">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <span class="nenhum-resultado-label">
+        RESULTADO DA BUSCA
+    </span>
+
+    <h3>
+        Nenhum produto encontrado
+    </h3>
+
+    <p>
+        Não encontramos produtos que correspondam
+        aos filtros selecionados.
+    </p>
+
+    <button
+        type="button"
+        id="limparFiltrosResultado">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        LIMPAR FILTROS
+
+    </button>
+
+    </div>
+
+
+        <!-- =============================================
+             GRADE
+        ============================================== -->
+
+        <div class="grade-produtos">
+
+
+
+            <!-- =========================================
+                 SUÉTER
+            ========================================== -->
+
+            <a
+                href="produto.html?id=sueterp-frente"
+                class="produto"
+                data-produto-id="sueterp-frente">
+
+                <img
+                    src="images/sueterp-frente.png"
+                    alt="Suéter Essential">
+
+                <h4>
+                    SUÉTER ESSENTIAL
+                </h4>
+
+                <p class="preco">
+                    R$ 139,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 POLARBLUM
+            ========================================== -->
+
+            <a
+                href="produto.html?id=polarblum-frente"
+                class="produto"
+                data-produto-id="polarblum-frente">
+
+                <img
+                    src="images/polarblum-frente.png"
+                    alt="PolarBlum">
+
+                <h4>
+                    POLARBLUM
+                </h4>
+
+                <p class="preco">
+                    R$ 159,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 FLEECE
+            ========================================== -->
+
+            <a
+                href="produto.html?id=fleece-frente"
+                class="produto"
+                data-produto-id="fleece-frente">
+
+                <img
+                    src="images/fleece-frente.png"
+                    alt="Fleece">
+
+                <h4>
+                    FLEECE ESSENTIAL
+                </h4>
+
+                <p class="preco">
+                    R$ 139,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 FRANCE AC
+            ========================================== -->
+
+            <a
+                href="produto.html?id=france-ac"
+                class="produto"
+                data-produto-id="france-ac">
+
+                <img
+                    src="images/france-ac.png"
+                    alt="France AC">
+
+                <h4>
+                    FRANCE AC
+                </h4>
+
+                <p class="preco">
+                    R$ 89,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 BALTIC AC
+            ========================================== -->
+
+            <a
+                href="produto.html?id=riskbaltic"
+                class="produto"
+                data-produto-id="riskbaltic">
+
+                <img
+                    src="images/riskbaltic.png"
+                    alt="BALTIC AC">
+
+                <h4>
+                    BALTIC AC
+                </h4>
+
+                <p class="preco">
+                    R$ 159,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 FLEECE LUMIÉRE
+            ========================================== -->
+
+            <a
+                href="produto.html?id=lumiere"
+                class="produto"
+                data-produto-id="lumiere">
+
+                <img
+                    src="images/lumiere.png"
+                    alt="FLEECE LUMIÉRE">
+
+                <h4>
+                    FLEECE LUMIÉRE
+                </h4>
+
+                <p class="preco">
+                    R$ 209,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 CALÇA LUMIÉRE
+            ========================================== -->
+
+            <a
+                href="produto.html?id=lumierecalca"
+                class="produto"
+                data-produto-id="lumierecalca">
+
+                <img
+                    src="images/lumierecalca.png"
+                    alt="Calça Fleece Lumiére">
+
+                <h4>
+                    FLEECE LUMIÉRE
+                </h4>
+
+                <p class="preco">
+                    R$ 169,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 BERMUDA LUMIÉRE
+            ========================================== -->
+
+            <a
+                href="produto.html?id=lumiereberm"
+                class="produto"
+                data-produto-id="lumiereberm">
+
+                <img
+                    src="images/lumiereberm.png"
+                    alt="Bermuda Fleece Lumiére">
+
+                <h4>
+                    FLEECE LUMIÉRE
+                </h4>
+
+                <p class="preco">
+                    R$ 139,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+
+            <!-- =========================================
+                 LEMONTEE
+            ========================================== -->
+
+            <a
+                href="produto.html?id=lemontee"
+                class="produto"
+                data-produto-id="lemontee">
+
+                <img
+                    src="images/lemontee.png"
+                    alt="Lemontee AC">
+
+                <h4>
+                    LEMONTEE AC
+                </h4>
+
+                <p class="preco">
+                    R$ 119,99
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </a>
+
+
+    </main>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIS VENDIDOS
+===================================================== -->
+
+<section class="mais-vendidos">
+
+    <h2>
+        MAIS VENDIDOS
+    </h2>
+
+
+    <div class="carrossel-produtos">
+
+
+        <a
+            href="produto.html?id=black-hat"
+            class="produto-mini">
+
+            <img
+                src="images/black-hat.png"
+                alt="Black Hat">
+
+            <p>
+                Black Hat
+            </p>
+
+        </a>
+
+
+        <a
+            href="produto.html?id=armoire-hat"
+            class="produto-mini">
+
+            <img
+                src="images/armoire-hat.png"
+                alt="Armoire Hat">
+
+            <p>
+                Armoire Hat
+            </p>
+
+        </a>
+
+
+        <a
+            href="produto.html?id=sueterp-frente"
+            class="produto-mini">
+
+            <img
+                src="images/sueterp-frente.png"
+                alt="Suéter Essential">
+
+            <p>
+                Suéter Essential
+            </p>
+
+        </a>
+
+
+        <a
+            href="produto.html?id=polarblum-frente"
+            class="produto-mini">
+
+            <img
+                src="images/polarblum-frente.png"
+                alt="PolarBlum">
+
+            <p>
+                PolarBlum
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <div class="newsletter-texto">
+
+        <h2>
+            FIQUE POR DENTRO DAS NOVIDADES
+        </h2>
+
+        <p>
+
+            Cadastre seu e-mail para receber lançamentos,
+            promoções e novidades da Armoire Central.
+
+        </p>
+
+    </div>
+
+
+    <form class="newsletter-form">
+
+        <input
+            type="email"
+            placeholder="Digite seu melhor e-mail">
+
+        <button type="submit">
+            CADASTRAR
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOAST DO CARRINHO
+===================================================== -->
+
+<div
+    id="toastCarrinho"
+    class="toast-carrinho">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+        Produto adicionado ao carrinho com sucesso!
+    </span>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div>
+
+        <h3>
+            ARMOIRE CENTRAL
+        </h3>
+
+        <p>
+            Elegância, qualidade e autenticidade.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>
+            INSTITUCIONAL
+        </h4>
+
+        <p>
+            Quem Somos
+        </p>
+
+        <p>
+            Política de Trocas
+        </p>
+
+        <p>
+            Privacidade
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>
+            ATENDIMENTO
+        </h4>
+
+        <p>
+            WhatsApp
+        </p>
+
+        <p>
+            E-mail
+        </p>
+
+        <p>
+            Horário Comercial
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>
+            AJUDA
+        </h4>
+
+        <p>
+            Perguntas Frequentes
+        </p>
+
+        <p>
+            Trocas e Devoluções
+        </p>
+
+        <p>
+            Acompanhar Pedido
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     QUICK SHOP
+===================================================== -->
+
+<div
+    class="quick-shop-overlay"
+    id="quickShopOverlay">
+
+
+    <div
+        class="quick-shop"
+        id="quickShop">
+
+
+        <!-- FECHAR -->
+
+        <button
+            type="button"
+            class="quick-shop-fechar"
+            id="fecharQuickShop"
+            aria-label="Fechar">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- IMAGEM -->
+
+        <div class="quick-shop-imagem">
+
+            <img
+                id="quickShopImagem"
+                src=""
+                alt="">
+
+        </div>
+
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="quick-shop-info">
+
+
+            <span
+                class="quick-shop-marca"
+                id="quickShopMarca">
+            </span>
+
+
+            <h2
+                id="quickShopNome">
+            </h2>
+
+
+            <p
+                class="quick-shop-preco"
+                id="quickShopPreco">
+            </p>
+
+
+
+            <!-- TAMANHO -->
+
+            <div
+                class="quick-shop-secao"
+                id="quickShopTamanhoSecao">
+
+
+                <div class="quick-shop-titulo">
+
+                    <span>
+                        Tamanho
+                    </span>
+
+                    <span
+                        id="quickShopTamanhoSelecionado">
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="quick-shop-tamanhos"
+                    id="quickShopTamanhos">
+                </div>
+
+
+                <p
+                    class="quick-shop-erro"
+                    id="quickShopErro">
+
+                    Faltou apenas selecionar o seu tamanho
+
+                </p>
+
+            </div>
+
+
+
+            <!-- QUANTIDADE -->
+
+            <div class="quick-shop-secao">
+
+
+                <div class="quick-shop-titulo">
+
+                    <span>
+                        Quantidade
+                    </span>
+
+                </div>
+
+
+                <div class="quick-shop-quantidade">
+
+
+                    <button
+                        type="button"
+                        id="quickShopMenos">
+
+                        −
+
+                    </button>
+
+
+                    <span
+                        id="quickShopQuantidade">
+
+                        1
+
+                    </span>
+
+
+                    <button
+                        type="button"
+                        id="quickShopMais">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADICIONAR -->
+
+            <button
+                type="button"
+                class="quick-shop-adicionar"
+                id="quickShopAdicionar">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                ADICIONAR AO CARRINHO
+
+            </button>
+
+
+
+            <!-- VER PRODUTO -->
+
+            <a
+                href="#"
+                class="quick-shop-ver-produto"
+                id="quickShopVerProduto">
+
+                VER DETALHES DO PRODUTO
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     DADOS DOS PRODUTOS
+===================================================== -->
+
+<script src="js/produtos-data.js"></script>
+
+
+
+<!-- =====================================================
+     CARRINHO
+===================================================== -->
+
+<script src="js/carrinho.js"></script>
+
+
+
+<!-- =====================================================
+     FILTROS
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =================================================
+       ELEMENTOS
+    ================================================= */
+
+    const cards =
+        document.querySelectorAll(
+            ".grade-produtos .produto[data-produto-id]"
+        );
+
+
+    const filtrosCategoria =
+        document.querySelectorAll(
+            ".filtro-categoria"
+        );
+
+
+    const filtrosTamanho =
+        document.querySelectorAll(
+            ".filtro-tamanho"
+        );
+
+
+    const filtrosCor =
+        document.querySelectorAll(
+            ".filtro-cor"
+        );
+
+
+    const nenhumResultado =
+        document.getElementById(
+            "nenhumResultado"
+        );
+
+
+    const contadorProdutos =
+        document.getElementById(
+            "contadorProdutos"
+        );
+
+
+    const limparFiltros =
+        document.getElementById(
+            "limparFiltros"
+        );
+
+
+    const limparFiltrosResultado =
+        document.getElementById(
+            "limparFiltrosResultado"
+        );
+
+
+    const verColecaoCompleta =
+        document.getElementById(
+            "verColecaoCompleta"
+        );
+
+
+
+    /* =================================================
+       NORMALIZAR TEXTO
+    ================================================= */
+
+    function normalizarTexto(texto) {
+
+        return String(texto || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+
+    }
+
+
+
+    /* =================================================
+       CATEGORIA DA URL
+    ================================================= */
+
+    const parametros =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const categoriaURL =
+        parametros.get("categoria");
+
+
+
+    /* =================================================
+       MAPA DAS CATEGORIAS
+    ================================================= */
+
+    const mapaCategorias = {
+
+        "camisetas-polos": [
+            "camisetas",
+            "polos"
+        ],
+
+        "camisas": [
+            "camisas"
+        ],
+
+        "calcas-bermudas": [
+            "calcas",
+            "bermudas"
+        ],
+
+        "acessorios": [
+            "acessorios"
+        ]
+
+    };
+
+
+
+    /* =================================================
+       SELECIONAR CATEGORIA VINDO DA HOME
+    ================================================= */
+
+    if (
+        categoriaURL &&
+        mapaCategorias[categoriaURL]
+    ) {
+
+        const categoriasSelecionadas =
+            mapaCategorias[categoriaURL];
+
+
+        filtrosCategoria.forEach(
+            function (checkbox) {
+
+                if (
+                    categoriasSelecionadas.includes(
+                        checkbox.value
+                    )
+                ) {
+
+                    checkbox.checked = true;
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       PRODUTO SEM DADOS
+    ================================================= */
+
+    function obterDadosProduto(id) {
+
+        if (
+            typeof produtos === "undefined"
+        ) {
+
+            return null;
+
+        }
+
+
+        return produtos[id] || null;
+
+    }
+
+
+
+    /* =================================================
+       VERIFICAR CATEGORIA
+    ================================================= */
+
+    function produtoPertenceCategoria(
+        produto,
+        categoriasSelecionadas
+    ) {
+
+        if (
+            categoriasSelecionadas.length === 0
+        ) {
+
+            return true;
+
+        }
+
+
+        if (!produto) {
+
+            return false;
+
+        }
+
+
+        /*
+         * A classificação principal será
+         * adicionada no produtos-data.js.
+         */
+
+        const categoriaProduto =
+            normalizarTexto(
+                produto.tipo ||
+                produto.grupo ||
+                produto.categoria
+            );
+
+
+        return categoriasSelecionadas.some(
+            function (categoria) {
+
+                const categoriaNormalizada =
+                    normalizarTexto(
+                        categoria
+                    );
+
+
+                return (
+                    categoriaProduto ===
+                    categoriaNormalizada
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       VERIFICAR TAMANHO
+    ================================================= */
+
+    function produtoPossuiTamanho(
+        produto,
+        tamanhosSelecionados
+    ) {
+
+        if (
+            tamanhosSelecionados.length === 0
+        ) {
+
+            return true;
+
+        }
+
+
+        if (
+            !produto ||
+            !Array.isArray(produto.tamanhos)
+        ) {
+
+            return false;
+
+        }
+
+
+        return tamanhosSelecionados.some(
+            function (tamanho) {
+
+                return produto.tamanhos
+                    .map(function (item) {
+
+                        return normalizarTexto(
+                            item
+                        );
+
+                    })
+                    .includes(
+                        normalizarTexto(
+                            tamanho
+                        )
+                    );
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       VERIFICAR COR
+    ================================================= */
+
+    function produtoPossuiCor(
+        produto,
+        coresSelecionadas
+    ) {
+
+        if (
+            coresSelecionadas.length === 0
+        ) {
+
+            return true;
+
+        }
+
+
+        if (
+            !produto ||
+            !Array.isArray(produto.cores)
+        ) {
+
+            return false;
+
+        }
+
+
+        const coresProduto =
+            produto.cores.map(
+                function (cor) {
+
+                    if (
+                        typeof cor === "string"
+                    ) {
+
+                        return normalizarTexto(
+                            cor
+                        );
+
+                    }
+
+
+                    return normalizarTexto(
+                        cor.nome
+                    );
+
+                }
+            );
+
+
+        return coresSelecionadas.some(
+            function (cor) {
+
+                return coresProduto.includes(
+                    normalizarTexto(cor)
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       APLICAR FILTROS
+    ================================================= */
+
+    function aplicarFiltros() {
+
+
+        const categoriasSelecionadas =
+            Array.from(
+                filtrosCategoria
+            )
+            .filter(function (checkbox) {
+
+                return checkbox.checked;
+
+            })
+            .map(function (checkbox) {
+
+                return checkbox.value;
+
+            });
+
+
+
+        const tamanhosSelecionados =
+            Array.from(
+                filtrosTamanho
+            )
+            .filter(function (checkbox) {
+
+                return checkbox.checked;
+
+            })
+            .map(function (checkbox) {
+
+                return checkbox.value;
+
+            });
+
+
+
+        const coresSelecionadas =
+            Array.from(
+                filtrosCor
+            )
+            .filter(function (botao) {
+
+                return botao.classList.contains(
+                    "ativo"
+                );
+
+            })
+            .map(function (botao) {
+
+                return botao.dataset.cor;
+
+            });
+
+
+
+        let quantidadeVisivel = 0;
+
+
+
+        cards.forEach(
+            function (card) {
+
+
+                const id =
+                    card.dataset.produtoId;
+
+
+                const produto =
+                    obterDadosProduto(id);
+
+
+                const categoriaValida =
+                    produtoPertenceCategoria(
+                        produto,
+                        categoriasSelecionadas
+                    );
+
+
+                const tamanhoValido =
+                    produtoPossuiTamanho(
+                        produto,
+                        tamanhosSelecionados
+                    );
+
+
+                const corValida =
+                    produtoPossuiCor(
+                        produto,
+                        coresSelecionadas
+                    );
+
+
+                const mostrar =
+                    categoriaValida &&
+                    tamanhoValido &&
+                    corValida;
+
+
+
+                if (mostrar) {
+
+                    card.style.display = "";
+
+                    quantidadeVisivel++;
+
+                }
+
+                else {
+
+                    card.style.display = "none";
+
+                }
+
+            }
+        );
+
+
+
+        /* =============================================
+           CONTADOR
+        ============================================== */
+
+        if (
+            quantidadeVisivel === 1
+        ) {
+
+            contadorProdutos.textContent =
+                "1 produto encontrado";
+
+        }
+
+        else {
+
+            contadorProdutos.textContent =
+                quantidadeVisivel +
+                " produtos encontrados";
+
+        }
+
+
+
+        /* =============================================
+           NENHUM RESULTADO
+        ============================================== */
+
+        if (
+            quantidadeVisivel === 0
+        ) {
+
+            nenhumResultado.style.display =
+                "flex";
+
+        }
+
+        else {
+
+            nenhumResultado.style.display =
+                "none";
+
+        }
+
+    }
+
+
+
+    /* =================================================
+       EVENTOS — CATEGORIAS
+    ================================================= */
+
+    filtrosCategoria.forEach(
+        function (checkbox) {
+
+            checkbox.addEventListener(
+                "change",
+                aplicarFiltros
+            );
+
+        }
+    );
+
+
+
+    /* =================================================
+       EVENTOS — TAMANHOS
+    ================================================= */
+
+    filtrosTamanho.forEach(
+        function (checkbox) {
+
+            checkbox.addEventListener(
+                "change",
+                aplicarFiltros
+            );
+
+        }
+    );
+
+
+
+    /* =================================================
+       EVENTOS — CORES
+    ================================================= */
+
+    filtrosCor.forEach(
+        function (botao) {
+
+            botao.addEventListener(
+                "click",
+                function () {
+
+                    botao.classList.toggle(
+                        "ativo"
+                    );
+
+                    aplicarFiltros();
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =================================================
+       LIMPAR FILTROS
+    ================================================= */
+
+    function resetarFiltros() {
+
+
+        filtrosCategoria.forEach(
+            function (checkbox) {
+
+                checkbox.checked = false;
+
+            }
+        );
+
+
+        filtrosTamanho.forEach(
+            function (checkbox) {
+
+                checkbox.checked = false;
+
+            }
+        );
+
+
+        filtrosCor.forEach(
+            function (botao) {
+
+                botao.classList.remove(
+                    "ativo"
+                );
+
+            }
+        );
+
+
+        /*
+         * Remove a categoria da URL sem
+         * recarregar a página.
+         */
+
+        const url =
+            new URL(
+                window.location.href
+            );
+
+
+        url.searchParams.delete(
+            "categoria"
+        );
+
+
+        window.history.replaceState(
+            {},
+            "",
+            url
+        );
+
+
+        aplicarFiltros();
+
+    }
+
+
+
+    limparFiltros.addEventListener(
+        "click",
+        resetarFiltros
+    );
+
+
+    limparFiltrosResultado.addEventListener(
+        "click",
+        resetarFiltros
+    );
+
+
+
+    /* =================================================
+       VER COLEÇÃO COMPLETA
+    ================================================= */
+
+    verColecaoCompleta.addEventListener(
+        "click",
+        function () {
+
+            resetarFiltros();
+
+            window.scrollTo({
+
+                top:
+                    document.querySelector(
+                        ".catalogo"
+                    ).offsetTop - 40,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+
+
+    /* =================================================
+       PRIMEIRA EXECUÇÃO
+    ================================================= */
+
+    aplicarFiltros();
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     QUICK SHOP
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =============================================
+           ELEMENTOS
+        ============================================== */
+
+        const overlay =
+            document.getElementById(
+                "quickShopOverlay"
+            );
+
+
+        const fechar =
+            document.getElementById(
+                "fecharQuickShop"
+            );
+
+
+        const imagem =
+            document.getElementById(
+                "quickShopImagem"
+            );
+
+
+        const marca =
+            document.getElementById(
+                "quickShopMarca"
+            );
+
+
+        const nome =
+            document.getElementById(
+                "quickShopNome"
+            );
+
+
+        const preco =
+            document.getElementById(
+                "quickShopPreco"
+            );
+
+
+        const tamanhos =
+            document.getElementById(
+                "quickShopTamanhos"
+            );
+
+
+        const tamanhoSelecionado =
+            document.getElementById(
+                "quickShopTamanhoSelecionado"
+            );
+
+
+        const tamanhoSecao =
+            document.getElementById(
+                "quickShopTamanhoSecao"
+            );
+
+
+        const erro =
+            document.getElementById(
+                "quickShopErro"
+            );
+
+
+        const quantidade =
+            document.getElementById(
+                "quickShopQuantidade"
+            );
+
+
+        const menos =
+            document.getElementById(
+                "quickShopMenos"
+            );
+
+
+        const mais =
+            document.getElementById(
+                "quickShopMais"
+            );
+
+
+        const adicionar =
+            document.getElementById(
+                "quickShopAdicionar"
+            );
+
+
+        const verProduto =
+            document.getElementById(
+                "quickShopVerProduto"
+            );
+
+
+
+        /* =============================================
+           VARIÁVEIS
+        ============================================== */
+
+        let produtoAtual = null;
+
+        let tamanhoAtual = null;
+
+        let quantidadeAtual = 1;
+
+
+
+        /* =============================================
+           PREÇO
+        ============================================== */
+
+        function formatarPreco(valor) {
+
+            return Number(valor).toLocaleString(
+                "pt-BR",
+                {
+                    style: "currency",
+                    currency: "BRL"
+                }
+            );
+
+        }
+
+
+
+        /* =============================================
+           ABRIR
+        ============================================== */
+
+        window.abrirQuickShop =
+            function (idProduto) {
+
+
+                const produto =
+                    produtos[idProduto];
+
+
+                if (!produto) {
+
+                    console.error(
+                        "Produto não encontrado:",
+                        idProduto
+                    );
+
+                    return;
+
+                }
+
+
+                produtoAtual =
+                    produto;
+
+
+                tamanhoAtual =
+                    null;
+
+
+                quantidadeAtual =
+                    1;
+
+
+
+                imagem.src =
+                    produto.imagens[0];
+
+
+                imagem.alt =
+                    produto.nome;
+
+
+                marca.textContent =
+                    produto.marca ||
+                    "Armoire Central";
+
+
+                nome.textContent =
+                    produto.nome;
+
+
+                preco.textContent =
+                    formatarPreco(
+                        produto.preco
+                    );
+
+
+
+                /* =====================================
+                   LINK
+                ====================================== */
+
+                verProduto.href =
+                    "produto.html?id=" +
+                    encodeURIComponent(
+                        produto.id
+                    );
+
+
+
+                /* =====================================
+                   QUANTIDADE
+                ====================================== */
+
+                quantidade.textContent =
+                    "1";
+
+
+
+                /* =====================================
+                   TAMANHOS
+                ====================================== */
+
+                tamanhos.innerHTML =
+                    "";
+
+
+                erro.classList.remove(
+                    "mostrar"
+                );
+
+
+                tamanhoSelecionado.textContent =
+                    "";
+
+
+
+                const listaTamanhos =
+                    Array.isArray(
+                        produto.tamanhos
+                    )
+                        ? produto.tamanhos
+                        : [];
+
+
+
+                if (
+                    listaTamanhos.length === 0
+                ) {
+
+                    tamanhoSecao.style.display =
+                        "none";
+
+                }
+
+                else {
+
+                    tamanhoSecao.style.display =
+                        "block";
+
+
+                    listaTamanhos.forEach(
+                        function (tamanho) {
+
+
+                            const botao =
+                                document.createElement(
+                                    "button"
+                                );
+
+
+                            botao.type =
+                                "button";
+
+
+                            botao.textContent =
+                                tamanho;
+
+
+
+                            botao.addEventListener(
+                                "click",
+                                function () {
+
+                                    selecionarTamanho(
+                                        tamanho,
+                                        botao
+                                    );
+
+                                }
+                            );
+
+
+                            tamanhos.appendChild(
+                                botao
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =====================================
+                   ABRIR MODAL
+                ====================================== */
+
+                overlay.classList.add(
+                    "ativo"
+                );
+
+
+                document.body.classList.add(
+                    "quick-shop-aberto"
+                );
+
+            };
+
+
+
+        /* =============================================
+           SELECIONAR TAMANHO
+        ============================================== */
+
+        function selecionarTamanho(
+            tamanho,
+            botao
+        ) {
+
+
+            tamanhoAtual =
+                tamanho;
+
+
+            document
+                .querySelectorAll(
+                    ".quick-shop-tamanhos button"
+                )
+                .forEach(
+                    function (item) {
+
+                        item.classList.remove(
+                            "ativo"
+                        );
+
+                    }
+                );
+
+
+            botao.classList.add(
+                "ativo"
+            );
+
+
+            tamanhoSelecionado.textContent =
+                tamanho;
+
+
+            erro.classList.remove(
+                "mostrar"
+            );
+
+        }
+
+
+
+        /* =============================================
+           MAIS
+        ============================================== */
+
+        mais.addEventListener(
+            "click",
+            function () {
+
+
+                if (!produtoAtual) return;
+
+
+                if (
+                    produtoAtual.estoque &&
+                    quantidadeAtual >=
+                    produtoAtual.estoque
+                ) {
+
+                    return;
+
+                }
+
+
+                quantidadeAtual++;
+
+
+                quantidade.textContent =
+                    quantidadeAtual;
+
+            }
+        );
+
+
+
+        /* =============================================
+           MENOS
+        ============================================== */
+
+        menos.addEventListener(
+            "click",
+            function () {
+
+
+                if (
+                    quantidadeAtual <= 1
+                ) {
+
+                    return;
+
+                }
+
+
+                quantidadeAtual--;
+
+
+                quantidade.textContent =
+                    quantidadeAtual;
+
+            }
+        );
+
+
+
+        /* =============================================
+           ADICIONAR
+        ============================================== */
+
+        adicionar.addEventListener(
+            "click",
+            function () {
+
+
+                if (!produtoAtual) return;
+
+
+
+                const possuiTamanhos =
+                    Array.isArray(
+                        produtoAtual.tamanhos
+                    ) &&
+                    produtoAtual.tamanhos.length > 0;
+
+
+
+                if (
+                    possuiTamanhos &&
+                    !tamanhoAtual
+                ) {
+
+                    erro.classList.add(
+                        "mostrar"
+                    );
+
+                    return;
+
+                }
+
+
+
+                if (
+                    typeof adicionarCarrinho ===
+                    "function"
+                ) {
+
+                    adicionarCarrinho(
+                        produtoAtual.id,
+                        quantidadeAtual
+                    );
+
+                }
+
+
+                fecharQuickShop();
+
+            }
+        );
+
+
+
+        /* =============================================
+           FECHAR
+        ============================================== */
+
+        function fecharQuickShop() {
+
+
+            overlay.classList.remove(
+                "ativo"
+            );
+
+
+            document.body.classList.remove(
+                "quick-shop-aberto"
+            );
+
+
+            produtoAtual =
+                null;
+
+
+            tamanhoAtual =
+                null;
+
+
+            quantidadeAtual =
+                1;
+
+        }
+
+
+
+        fechar.addEventListener(
+            "click",
+            fecharQuickShop
+        );
+
+
+
+        /* =============================================
+           CLICAR FORA
+        ============================================== */
+
+        overlay.addEventListener(
+            "click",
+            function (evento) {
+
+
+                if (
+                    evento.target === overlay
+                ) {
+
+                    fecharQuickShop();
+
+                }
+
+            }
+        );
+
+
+
+        /* =============================================
+           ESC
+        ============================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (evento) {
+
+
+                if (
+                    evento.key === "Escape" &&
+                    overlay.classList.contains(
+                        "ativo"
+                    )
+                ) {
+
+                    fecharQuickShop();
+
+                }
+
+            }
+        );
+
+
+
+        /* =============================================
+           BOTÕES COMPRAR
+        ============================================== */
+
+        document
+            .querySelectorAll(
+                ".produto[data-produto-id] button"
+            )
+            .forEach(
+                function (botao) {
+
+
+                    botao.addEventListener(
+                        "click",
+                        function (evento) {
+
+
+                            evento.preventDefault();
+
+                            evento.stopPropagation();
+
+
+                            const produto =
+                                botao.closest(
+                                    ".produto"
+                                );
+
+
+                            if (!produto) {
+                                return;
+                            }
+
+
+                            const idProduto =
+                                produto.dataset.produtoId;
+
+
+                            if (!idProduto) {
+                                return;
+                            }
+
+
+                            abrirQuickShop(
+                                idProduto
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+     CONTADOR / CARRINHO
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        if (
+            typeof atualizarContador ===
+            "function"
+        ) {
+
+            atualizarContador();
+
+        }
+
+
+        if (
+            typeof atualizarCarrinho ===
+            "function"
+        ) {
+
+            atualizarCarrinho();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

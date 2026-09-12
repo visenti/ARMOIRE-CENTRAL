@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Armoire Central</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     BARRA SUPERIOR
+================================================== -->
+
+<div class="top-bar">
+
+    FRETE GRÁTIS PARA TODO BRASIL EM COMPRAS ACIMA DE R$499
+
+</div>
+
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header-home">
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="images/logo.png"
+                alt="Armoire Central"
+            >
+
+        </a>
+
+    </div>
+
+
+    <nav class="nav-desktop">
+    </nav>
+
+
+    <div class="icons-home">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <i class="fa-regular fa-user"></i>
+
+        <a href="produtos.html" class="icone-carrinho-home">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+        </a>
+
+        <button
+            class="botao-menu"
+            id="abrirMenu"
+            aria-label="Abrir menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MENU SANDUÍCHE
+================================================== -->
+
+<div
+    class="menu-overlay"
+    id="menuOverlay"
+></div>
+
+
+<aside
+    class="menu-lateral"
+    id="menuLateral"
+>
+
+    <div class="menu-topo">
+
+        <span>MENU</span>
+
+        <button
+            id="fecharMenu"
+            aria-label="Fechar menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="menu-links">
+
+        <a href="index.html">
+            INÍCIO
+        </a>
+
+        <a href="produtos.html">
+            PRODUTOS
+        </a>
+
+        <a href="#">
+            QUEM SOMOS
+        </a>
+
+        <a href="#">
+            FALE CONOSCO
+        </a>
+
+    </nav>
+
+
+    <div class="menu-inferior">
+
+        <p>
+            ARMOIRE CENTRAL
+        </p>
+
+        <span>
+            PADRÃO BÁSICO. LEGADO ETERNO.
+        </span>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<main>
+
+
+<section class="hero-home">
+
+
+    <div class="hero-imagem">
+
+        <img
+            src="images/banneraf.png"
+            alt="Coleção Armoire Central"
+        >
+
+    </div>
+
+
+    <div class="hero-conteudo">
+
+        <span class="hero-overline">
+            ARMOIRE CENTRAL
+        </span>
+
+
+        <h1>
+            PADRÃO BÁSICO.
+            <br>
+            LEGADO ETERNO.
+        </h1>
+
+
+        <p>
+
+            Peças essenciais com qualidade impecável
+            e elegância que atravessa gerações.
+
+        </p>
+
+
+        <a
+            href="produtos.html"
+            class="botao-colecao"
+        >
+
+            <span>
+                CONHEÇA A COLEÇÃO
+            </span>
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     APRESENTAÇÃO DA COLEÇÃO
+================================================== -->
+
+<section class="introducao-home">
+
+    <span>
+        ARMOIRE CENTRAL
+    </span>
+
+    <h2>
+        ESSENCIAL.
+        <br>
+        SOFISTICADO.
+        <br>
+        ATEMPORAL.
+    </h2>
+
+    <p>
+
+        Uma seleção criada para quem entende
+        que estilo não precisa ser excessivo.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     DESTAQUE DA COLEÇÃO
+================================================== -->
+
+<section class="destaque-home">
+
+    <div class="destaque-imagem">
+
+        <img
+            src="images/bannerpd.png"
+            alt="Coleção Armoire Central"
+        >
+
+    </div>
+
+
+    <div class="destaque-conteudo">
+
+        <span>
+            NOVA COLEÇÃO
+        </span>
+
+        <h2>
+            O ESSENCIAL
+            <br>
+            EM NOVA FORMA.
+        </h2>
+
+        <p>
+
+            Descubra peças desenvolvidas para
+            acompanhar todos os momentos.
+
+        </p>
+
+
+        <a
+            href="#"
+            class="botao-colecao"
+        >
+
+            <span>
+                CONHEÇA-NOS
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CATEGORIAS
+================================================== -->
+
+<section class="categorias-home">
+
+
+    <div class="titulo-secao">
+
+        <span>
+            EXPLORE
+        </span>
+
+        <h2>
+            NOSSAS PRINCIPAIS CATEGORIAS
+        </h2>
+
+    </div>
+
+
+    <div class="categorias-grid">
+
+
+        <a
+            href="produtos.html?categoria=camisetas&categoria=polos"
+            class="categoria-home"
+        >
+
+            <img
+                src="images/categoria-polo.png"
+                alt="Camisetas e Polos"
+            >
+
+            <div class="categoria-overlay">
+
+                <h3>
+                    CAMISETAS & POLOS
+                </h3>
+
+                <span>
+                    EXPLORAR
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a
+            href="produtos.html?categoria=camisas"
+            class="categoria-home"
+        >
+
+            <img
+                src="images/categoria-camisa.png"
+                alt="Camisas"
+            >
+
+            <div class="categoria-overlay">
+
+                <h3>
+                    CAMISAS
+                </h3>
+
+                <span>
+                    EXPLORAR
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a
+            href="produtos.html?categoria=calcas&categoria=bermudas"
+            class="categoria-home"
+        >
+
+            <img
+                src="images/categoria-calca.png"
+                alt="Calças e Bermudas"
+            >
+
+            <div class="categoria-overlay">
+
+                <h3>
+                    CALÇAS & BERMUDAS
+                </h3>
+
+                <span>
+                    EXPLORAR
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <a
+            href="produtos.html?categoria=acessorios"
+            class="categoria-home"
+        >
+
+            <img
+                src="images/categoria-acessorios.png"
+                alt="Acessórios"
+            >
+
+            <div class="categoria-overlay">
+
+                <h3>
+                    ACESSÓRIOS
+                </h3>
+
+                <span>
+                    EXPLORAR
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     BENEFÍCIOS
+================================================== -->
+
+<section class="beneficios-home">
+
+
+    <div class="beneficio">
+
+        <i class="fa-solid fa-gem"></i>
+
+        <h3>
+            QUALIDADE PREMIUM
+        </h3>
+
+        <p>
+            Materiais selecionados.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>
+            COMPRA SEGURA
+        </h3>
+
+        <p>
+            Ambiente protegido.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <h3>
+            FRETE GRÁTIS
+        </h3>
+
+        <p>
+            Acima de R$499.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio">
+
+        <i class="fa-solid fa-arrow-rotate-left"></i>
+
+        <h3>
+            TROCA FÁCIL
+        </h3>
+
+        <p>
+            Até 7 dias.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     NEWSLETTER
+================================================== -->
+
+<section class="newsletter-home">
+
+    <div class="newsletter-conteudo">
+
+        <span>
+            ARMOIRE CENTRAL
+        </span>
+
+        <h2>
+            ENTRE PARA O
+            <br>
+            UNIVERSO ARMOIRE.
+        </h2>
+
+        <p>
+
+            Receba novidades, lançamentos
+            e conteúdos exclusivos.
+
+        </p>
+
+
+        <form class="newsletter-form">
+
+            <input
+                type="email"
+                placeholder="Seu melhor e-mail"
+                required
+            >
+
+            <button type="submit">
+
+                <span>
+                    INSCREVER-SE
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ==================================================
+     RODAPÉ
+================================================== -->
+
+<footer class="footer-home">
+
+
+    <div class="footer-logo">
+
+        <img
+            src="images/logoinv.png"
+            alt="Armoire Central"
+        >
+
+    </div>
+
+
+    <div class="footer-coluna">
+
+        <h4>
+            ARMOIRE CENTRAL
+        </h4>
+
+        <a href="#">
+            Quem somos
+        </a>
+
+        <a href="#">
+            Nossa história
+        </a>
+
+        <a href="#">
+            Contato
+        </a>
+
+    </div>
+
+
+    <div class="footer-coluna">
+
+        <h4>
+            ATENDIMENTO
+        </h4>
+
+        <a href="#">
+            Fale conosco
+        </a>
+
+        <a href="#">
+            Trocas e devoluções
+        </a>
+
+        <a href="#">
+            Política de privacidade
+        </a>
+
+    </div>
+
+
+    <div class="footer-coluna">
+
+        <h4>
+            REDES SOCIAIS
+        </h4>
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            TikTok
+        </a>
+
+    </div>
+
+
+    <div class="footer-copy">
+
+        © 2026 Armoire Central
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+
+    const abrirMenu =
+        document.getElementById("abrirMenu");
+
+    const fecharMenu =
+        document.getElementById("fecharMenu");
+
+    const menuLateral =
+        document.getElementById("menuLateral");
+
+    const menuOverlay =
+        document.getElementById("menuOverlay");
+
+
+    function abrirMenuLateral(){
+
+        menuLateral.classList.add("aberto");
+
+        menuOverlay.classList.add("ativo");
+
+        document.body.classList.add("menu-aberto");
+
+    }
+
+
+    function fecharMenuLateral(){
+
+        menuLateral.classList.remove("aberto");
+
+        menuOverlay.classList.remove("ativo");
+
+        document.body.classList.remove("menu-aberto");
+
+    }
+
+
+    abrirMenu.addEventListener(
+        "click",
+        abrirMenuLateral
+    );
+
+
+    fecharMenu.addEventListener(
+        "click",
+        fecharMenuLateral
+    );
+
+
+    menuOverlay.addEventListener(
+        "click",
+        fecharMenuLateral
+    );
+
+
+});
+
+
+</script>
+
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

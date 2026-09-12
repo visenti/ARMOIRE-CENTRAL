@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produto | Armoire Central</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produto.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         BARRA SUPERIOR
+    ========================================================== -->
+
+    <div class="top-bar">
+        <p>FRETE GRÁTIS PARA TODO BRASIL EM COMPRAS ACIMA DE R$499</p>
+    </div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logoinv.png" alt="Armoire Central">
+            </a>
+        </div>
+
+
+        <!--
+            IMPORTANTE:
+            Não existe mais menu horizontal aqui.
+
+            INÍCIO
+            PRODUTOS
+            QUEM SOMOS
+            FALE CONOSCO
+
+            ficam EXCLUSIVAMENTE no menu hambúrguer.
+        -->
+
+
+        <!-- ÍCONES -->
+        <div class="icons">
+
+            <!-- Pesquisa -->
+            <div class="icone-pesquisa" aria-label="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+
+            <!-- Perfil -->
+            <div class="icone-perfil" aria-label="Minha conta">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+
+            <!-- Carrinho -->
+            <div
+                class="icone-carrinho"
+                id="abrirCarrinho"
+                aria-label="Abrir carrinho"
+                role="button"
+                tabindex="0"
+            >
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="contador-carrinho">0</span>
+            </div>
+
+
+            <!-- Menu Hambúrguer -->
+            <button
+                class="botao-menu"
+                id="abrirMenu"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menuLateral"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         OVERLAY DO MENU
+    ========================================================== -->
+
+    <div
+        class="overlay-menu"
+        id="overlayMenu"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =========================================================
+         MENU HAMBÚRGUER / MENU LATERAL
+    ========================================================== -->
+
+    <aside
+        class="menu-lateral"
+        id="menuLateral"
+        aria-hidden="true"
+    >
+
+        <!-- Cabeçalho do menu -->
+        <div class="menu-lateral-topo">
+
+            <span>MENU</span>
+
+            <button
+                id="fecharMenu"
+                type="button"
+                aria-label="Fechar menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Links principais -->
+        <nav class="links-menu" aria-label="Menu principal">
+
+            <a href="index.html">
+                <span>01</span>
+
+                <strong>INÍCIO</strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <a href="produtos.html">
+                <span>02</span>
+
+                <strong>PRODUTOS</strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <a href="#">
+                <span>03</span>
+
+                <strong>QUEM SOMOS</strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <a href="#">
+                <span>04</span>
+
+                <strong>FALE CONOSCO</strong>
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </nav>
+
+
+        <!-- Rodapé do menu -->
+        <div class="menu-lateral-rodape">
+
+            <span>ARMOIRE CENTRAL</span>
+
+            <p>Elegância em cada detalhe.</p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         BREADCRUMB
+    ========================================================== -->
+
+    <section class="breadcrumb">
+
+        <a href="index.html">Início</a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <a href="produtos.html">Produtos</a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <span id="breadcrumbProduto">Produto</span>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PRODUTO
+    ========================================================== -->
+
+    <main>
+
+        <section class="produto-container">
+
+
+            <!-- =================================================
+                 GALERIA
+            ================================================== -->
+
+            <div class="produto-galeria">
+
+                <!-- Miniaturas -->
+                <div
+                    class="miniaturas"
+                    id="miniaturas"
+                >
+                    <!--
+                        As imagens serão carregadas
+                        dinamicamente pelo produto.js.
+                    -->
+                </div>
+
+
+                <!-- Imagem principal -->
+                <div class="imagem-principal-container">
+
+                    <img
+                        id="imagemPrincipal"
+                        src=""
+                        alt="Produto Armoire Central"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMAÇÕES DO PRODUTO
+            ================================================== -->
+
+            <div class="produto-info">
+
+                <!-- Marca -->
+                <span
+                    class="marca-produto"
+                    id="marcaProduto"
+                >
+                    ARMOIRE CENTRAL
+                </span>
+
+
+                <!-- Nome -->
+                <h1 id="nomeProduto">
+                    Produto
+                </h1>
+
+
+                <!-- Avaliação -->
+                <div class="avaliacao">
+
+                    <div class="estrelas">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <span>(0 avaliações)</span>
+
+                </div>
+
+
+                <!-- Preço -->
+                <div class="preco-produto">
+
+                    <strong id="precoProduto">
+                        R$ 0,00
+                    </strong>
+
+                    <span id="parcelamentoProduto">
+                        6x sem juros
+                    </span>
+
+                </div>
+
+
+                <!-- Pix -->
+                <div class="preco-pix">
+
+                    <i class="fa-brands fa-pix"></i>
+
+                    <span>
+                        5% OFF no Pix
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     CORES
+                ================================================== -->
+
+                <div class="opcao-produto">
+
+                    <div class="titulo-opcao">
+
+                        <span>Cor</span>
+
+                        <strong id="corSelecionada">
+                            Selecionar
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="cores"
+                        id="coresProduto"
+                    >
+                        <!-- Gerado pelo produto.js -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TAMANHOS
+                ================================================== -->
+
+                <div class="opcao-produto">
+
+                    <div class="titulo-opcao">
+
+                        <span>Tamanho</span>
+
+                        <strong id="tamanhoSelecionado">
+                            Selecionar
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="tamanhos"
+                        id="tamanhosProduto"
+                    >
+                        <!-- Gerado pelo produto.js -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUANTIDADE
+                ================================================== -->
+
+                <div class="quantidade-container">
+
+                    <span>Quantidade</span>
+
+                    <div class="quantidade">
+
+                        <button
+                            type="button"
+                            id="diminuirQuantidade"
+                            aria-label="Diminuir quantidade"
+                        >
+                            −
+                        </button>
+
+                        <span id="quantidadeProduto">1</span>
+
+                        <button
+                            type="button"
+                            id="aumentarQuantidade"
+                            aria-label="Aumentar quantidade"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BOTÃO COMPRAR
+                ================================================== -->
+
+                <button
+                    class="btn-comprar"
+                    id="btnComprar"
+                    type="button"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    ADICIONAR AO CARRINHO
+
+                </button>
+
+
+
+                <!-- =================================================
+                     INFORMAÇÕES EXTRAS
+                ================================================== -->
+
+                <div class="informacoes-compra">
+
+                    <div class="informacao-compra">
+
+                        <i class="fa-solid fa-truck"></i>
+
+                        <div>
+                            <strong>Frete grátis</strong>
+
+                            <span>
+                                Nas compras acima de R$499
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="informacao-compra">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+                            <strong>Compra segura</strong>
+
+                            <span>
+                                Seus dados estão protegidos
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="informacao-compra">
+
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                        <div>
+                            <strong>Troca fácil</strong>
+
+                            <span>
+                                Consulte nossa política de trocas
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DESCRIÇÃO
+                ================================================== -->
+
+                <div class="descricao-produto">
+
+                    <div class="titulo-secao-produto">
+                        <span>Descrição</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div
+                        class="conteudo-descricao"
+                        id="descricaoProduto"
+                    >
+                        <!-- Gerado pelo produto.js -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     COMPOSIÇÃO
+                ================================================== -->
+
+                <div class="composicao-produto">
+
+                    <div class="titulo-secao-produto">
+
+                        <span>Composição e detalhes</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                    <div
+                        class="conteudo-composicao"
+                        id="composicaoProduto"
+                    >
+                        <!-- Gerado pelo produto.js -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             PRODUTOS RELACIONADOS
+        ========================================================== -->
+
+        <section class="produtos-relacionados">
+
+            <div class="titulo-relacionados">
+
+                <span>EXPLORE MAIS</span>
+
+                <h2>Você também pode gostar</h2>
+
+            </div>
+
+
+            <div
+                class="grid-relacionados"
+                id="produtosRelacionados"
+            >
+                <!--
+                    Os produtos relacionados serão
+                    carregados pelo produto.js.
+                -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
+
+    <section class="newsletter">
+
+        <div class="newsletter-conteudo">
+
+            <span>ARMOIRE CENTRAL</span>
+
+            <h2>
+                Receba novidades
+                <br>
+                em primeira mão.
+            </h2>
+
+            <p>
+                Cadastre-se para receber lançamentos,
+                coleções exclusivas e novidades da Armoire Central.
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Seu melhor e-mail"
+                    required
+                >
+
+                <button type="submit">
+                    INSCREVER-SE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- Logo / Institucional -->
+            <div class="footer-coluna footer-marca">
+
+                <img
+                    src="images/logoinv.png"
+                    alt="Armoire Central"
+                >
+
+                <p>
+                    Elegância em cada detalhe.
+                </p>
+
+            </div>
+
+
+            <!-- Atendimento -->
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="#">
+                    Fale Conosco
+                </a>
+
+                <a href="#">
+                    Trocas e Devoluções
+                </a>
+
+                <a href="#">
+                    Política de Privacidade
+                </a>
+
+            </div>
+
+
+            <!-- Institucional -->
+            <div class="footer-coluna">
+
+                <h3>INSTITUCIONAL</h3>
+
+                <a href="#">
+                    Quem Somos
+                </a>
+
+                <a href="produtos.html">
+                    Produtos
+                </a>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+            </div>
+
+
+            <!-- Redes sociais -->
+            <div class="footer-coluna">
+
+                <h3>SIGA-NOS</h3>
+
+                <div class="redes-sociais">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Armoire Central. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         TOAST — PRODUTO ADICIONADO
+    ========================================================== -->
+
+    <div
+        class="toast-carrinho"
+        id="toastCarrinho"
+    >
+
+        <div class="toast-icone">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-texto">
+
+            <strong>
+                Adicionado ao Carrinho!
+            </strong>
+
+            <span>
+                Produto adicionado com sucesso.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         CARRINHO LATERAL
+    ========================================================== -->
+
+    <div
+        class="overlay-carrinho"
+        id="overlayCarrinho"
+    ></div>
+
+
+    <aside
+        class="carrinho"
+        id="carrinho"
+        aria-label="Carrinho de compras"
+    >
+
+        <!-- Cabeçalho -->
+        <div class="topo-carrinho">
+
+            <div>
+
+                <span>SEU</span>
+
+                <h2>
+                    Carrinho
+                </h2>
+
+            </div>
+
+
+            <button
+                id="fecharCarrinho"
+                type="button"
+                aria-label="Fechar carrinho"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Lista -->
+        <div id="listaCarrinho">
+
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+
+        </div>
+
+
+        <!-- Rodapé -->
+        <div class="rodape-carrinho">
+
+            <div class="total">
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="totalCarrinho">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn-finalizar"
+                type="button"
+            >
+                FINALIZAR COMPRA
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================================
+         SCRIPTS
+    ========================================================== -->
+
+    <script src="js/produtos-data.js"></script>
+
+    <script src="js/carrinho.js"></script>
+
+    <script src="js/produto.js"></script>
+
+
+
+    <!-- =========================================================
+         SCRIPT DO MENU HAMBÚRGUER
+    ========================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const abrirMenu =
+                document.getElementById("abrirMenu");
+
+            const fecharMenu =
+                document.getElementById("fecharMenu");
+
+            const menuLateral =
+                document.getElementById("menuLateral");
+
+            const overlayMenu =
+                document.getElementById("overlayMenu");
+
+
+            /* =====================================================
+               ABRIR MENU
+            ===================================================== */
+
+            function abrir() {
+
+                if (!menuLateral || !overlayMenu) return;
+
+                menuLateral.classList.add("ativo");
+
+                overlayMenu.classList.add("ativo");
+
+                menuLateral.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                overlayMenu.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                if (abrirMenu) {
+
+                    abrirMenu.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+                document.body.style.overflow = "hidden";
+
+            }
+
+
+            /* =====================================================
+               FECHAR MENU
+            ===================================================== */
+
+            function fechar() {
+
+                if (!menuLateral || !overlayMenu) return;
+
+                menuLateral.classList.remove("ativo");
+
+                overlayMenu.classList.remove("ativo");
+
+                menuLateral.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                overlayMenu.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                if (abrirMenu) {
+
+                    abrirMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+                document.body.style.overflow = "";
+
+            }
+
+
+            /* =====================================================
+               EVENTOS
+            ====================================================== */
+
+            if (abrirMenu) {
+
+                abrirMenu.addEventListener(
+                    "click",
+                    abrir
+                );
+
+            }
+
+
+            if (fecharMenu) {
+
+                fecharMenu.addEventListener(
+                    "click",
+                    fechar
+                );
+
+            }
+
+
+            if (overlayMenu) {
+
+                overlayMenu.addEventListener(
+                    "click",
+                    fechar
+                );
+
+            }
+
+
+            /* =====================================================
+               FECHAR AO CLICAR EM UM LINK
+            ====================================================== */
+
+            document
+                .querySelectorAll(".links-menu a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        fechar
+                    );
+
+                });
+
+
+            /* =====================================================
+               ESC FECHA O MENU
+            ====================================================== */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+
+                        fechar();
+
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+               PÁGINA ATIVA
+               
+               Nesta página:
+               produto.html → PRODUTOS ativo
+            ====================================================== */
+
+            const paginaAtual =
+                window.location.pathname
+                    .split("/")
+                    .pop() || "index.html";
+
+
+            document
+                .querySelectorAll(".links-menu a")
+                .forEach(function (link) {
+
+                    const href =
+                        link.getAttribute("href");
+
+                    if (!href || href === "#") return;
+
+                    const paginaLink =
+                        href
+                            .split("/")
+                            .pop();
+
+
+                    const produtoAtivo =
+                        paginaAtual === "produto.html" &&
+                        paginaLink === "produtos.html";
+
+
+                    const paginaNormal =
+                        paginaAtual === paginaLink;
+
+
+                    if (
+                        produtoAtivo ||
+                        paginaNormal
+                    ) {
+
+                        link.classList.add("ativo");
+
+                    }
+
+                });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
